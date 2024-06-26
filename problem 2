@@ -1,0 +1,23 @@
+def sum_of_even_fibonacci(limit):
+    # Starting values for the Fibonacci sequence
+    a, b = 1, 2
+    total_sum = 0
+
+    # Loop until the next Fibonacci number exceeds the limit
+    while a <= limit:
+        # Check if the current Fibonacci number is even
+        if a % 2 == 0:
+            total_sum += a
+        # Move to the next Fibonacci number
+        a, b = b, a + b
+
+    return total_sum
+
+# Define the limit
+limit = 4000000
+
+# Calculate the sum of even Fibonacci numbers
+result = sum_of_even_fibonacci(limit)
+
+# Print the result
+print("The sum of the even-valued terms in the Fibonacci sequence whose values do not exceed", limit, "is:", result)
