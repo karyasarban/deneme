@@ -1,0 +1,14 @@
+import math
+
+def number_of_routes(grid_size):
+    # Calculate the binomial coefficient (2*grid_size choose grid_size)
+    return math.comb(2 * grid_size, grid_size)
+
+# Define the grid size
+grid_size = 20
+
+# Calculate the number of routes through a 20x20 grid
+routes = number_of_routes(grid_size)
+
+# Print the result
+print(f"The number of routes through a {grid_size}x{grid_size} grid is: {routes}")
