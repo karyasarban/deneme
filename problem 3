@@ -1,0 +1,21 @@
+def largest_prime_factor(n):
+    # Initialize the smallest prime factor
+    i = 2
+
+    # Reduce n by dividing it by the smallest prime factor until n is reduced to 1
+    while i * i <= n:
+        if n % i:
+            i += 1
+        else:
+            n //= i
+
+    return n
+
+# Define the number
+number = 600851475143
+
+# Find the largest prime factor
+result = largest_prime_factor(number)
+
+# Print the result
+print("The largest prime factor of", number, "is:", result)
